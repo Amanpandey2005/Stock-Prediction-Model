@@ -1,97 +1,158 @@
 Stock Prediction Model
 
 Table of Contents
+
 Project Overview
+
 Features
+
 Technologies Used
+
 Installation
+
 Dataset
+
 Usage
+
 Model Architecture
+
 Training
+
 Evaluation
+
 Contributing
+
 License
 
 Project Overview
-This project implements a Stock Price Prediction Model using deep learning techniques. The model predicts future stock prices based on historical data and technical indicators. It leverages a combination of data preprocessing, feature engineering, and a neural network architecture to achieve accurate predictions.
+
+This project implements a Stock Price Prediction Model using deep learning techniques. The model predicts future stock prices based on historical data and technical indicators. It leverages preprocessing, feature engineering, and a neural network architecture to achieve accurate predictions.
 
 Features
-Predicts stock prices for selected companies.
+
+Predict stock prices for selected companies.
+
 Uses historical stock data and technical indicators as input.
+
 Supports model training, testing, and evaluation.
-Provides visualizations of predicted vs. actual stock prices.
+
+Visualizes predicted vs. actual stock prices.
+
 Easily extendable for multiple stocks or datasets.
 
 Technologies Used
+
 Programming Language: Python 3.x
 
 Libraries:
-pandas for data manipulation
-numpy for numerical computations
-matplotlib and seaborn for visualization
-scikit-learn for preprocessing and evaluation
-tensorflow / keras for building and training neural networks
+
+pandas – Data manipulation
+
+numpy – Numerical computations
+
+matplotlib & seaborn – Visualization
+
+scikit-learn – Preprocessing and evaluation
+
+tensorflow / keras – Building and training neural networks
 
 Installation
-Install required dependencies:
+
+Clone the repository:
+
+git clone https://github.com/yourusername/stock-prediction.git
+cd stock-prediction
+
+
+Install dependencies:
+
 pip install -r requirements.txt
 
 Dataset
+
 The model uses historical stock price data (OHLC: Open, High, Low, Close) with optional volume data. You can use datasets from:
+
 Yahoo Finance
+
 Kaggle Stock Market Datasets
-Ensure the CSV file has the following columns (at minimum):
+
+Required CSV columns:
+
 Date, Open, High, Low, Close, Volume
 
 Usage
-Data Preprocessing:
+Data Preprocessing
 from main import load_data, preprocess_data
+
 data = load_data("data/stock_data.csv")
 processed_data = preprocess_data(data)
 
-
-Training the Model:
+Training the Model
 from train import train_model
+
 model = train_model(processed_data, epochs=50, batch_size=32)
 
-
-Prediction:
+Making Predictions
 from predict import predict_prices
+
 predictions = predict_prices(model, test_data)
 
-
-Visualization:
+Visualization
 from visualize import plot_predictions
+
 plot_predictions(test_data['Close'], predictions)
 
 Model Architecture
+
 Input Layer: Historical stock features (OHLC + optional indicators)
+
 Hidden Layers: LSTM / GRU / Dense layers
-Output Layer: Predicted stock price (single value for regression)
+
+Output Layer: Predicted stock price (regression)
+
 Loss Function: Mean Squared Error (MSE)
 
 Optimizer: Adam
-(Modify according to your actual architecture: e.g., LSTM layers, units, dropout, etc.)
+
+Adjust layers, units, and dropout according to your dataset and experimentation.
 
 Training
-Split the dataset into train and test sets (e.g., 80% train, 20% test).
+
+Split dataset into train and test sets (e.g., 80% train, 20% test).
+
 Normalize features using MinMaxScaler or StandardScaler.
-Train the model using defined epochs and batch size.
-Save model weights for future predictions:
+
+Train model with defined epochs and batch_size.
+
+Save model for future use:
+
 model.save("models/stock_model.h5")
 
 Evaluation
-Evaluate the model using metrics like:
+
+Metrics:
+
 Mean Squared Error (MSE)
+
 Root Mean Squared Error (RMSE)
+
 Mean Absolute Error (MAE)
 
-Visualize the predicted vs. actual prices to assess performance.
+Visualize predicted vs. actual prices for performance assessment.
 
 Contributing
-Fork the repository.
+
+Fork the repository
+
 Create a new branch: git checkout -b feature-name
-Make your changes and commit: git commit -m "Add feature"
+
+Commit your changes: git commit -m "Add feature"
+
 Push to your branch: git push origin feature-name
 
+Create a Pull Request
+
+License
+
+This project is licensed under the MIT License – see the LICENSE
+ file for details.
