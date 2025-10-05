@@ -1,6 +1,16 @@
+# Core
+streamlit
 pandas
 numpy
-plotly
 matplotlib
+plotly
+
+# Machine Learning
 scikit-learn
 tensorflow
+keras
+
+# Optional (agar use kiya hai to hi rakho)
+yfinance
+seaborn
+torch
