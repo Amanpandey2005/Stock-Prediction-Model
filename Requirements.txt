@@ -1,5 +1,6 @@
 pandas
 numpy
+plotly
 matplotlib
 scikit-learn
 tensorflow
