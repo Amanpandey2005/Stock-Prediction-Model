@@ -1,16 +1,16 @@
 # Core
-streamlit==1.37.0
-pandas==2.2.2
-numpy==1.26.4
-matplotlib==3.9.2
-plotly==5.24.0
+streamlit
+pandas
+numpy
+matplotlib
+plotly
 
 # Machine Learning
-scikit-learn==1.5.2
-tensorflow==2.17.0
-keras==3.5.0
+scikit-learn
+tensorflow
+keras
 
 # Optional
-yfinance==0.2.44
-seaborn==0.13.2
-torch==2.4.0
+yfinance
+seaborn
+torch
